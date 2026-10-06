@@ -1,0 +1,7 @@
+components:
+  - name: calc
+    runtime: dotnet
+    target: package
+    project: src/Calc/Calc.csproj
+    test-project: tests/Calc.Tests/Calc.Tests.csproj
+    dotnet-version: '10.0.x'
