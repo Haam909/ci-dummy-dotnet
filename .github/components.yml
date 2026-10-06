@@ -5,3 +5,4 @@ components:
     project: src/Calc/Calc.csproj
     test-project: tests/Calc.Tests/Calc.Tests.csproj
     dotnet-version: '10.0.x'
+    integration-tests: tests/Calc.IntegrationTests/Calc.IntegrationTests.csproj

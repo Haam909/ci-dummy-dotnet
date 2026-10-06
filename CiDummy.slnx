@@ -3,6 +3,7 @@
     <Project Path="src/Calc/Calc.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/Calc.IntegrationTests/Calc.IntegrationTests.csproj" />
     <Project Path="tests/Calc.Tests/Calc.Tests.csproj" />
   </Folder>
 </Solution>
