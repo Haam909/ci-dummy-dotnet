@@ -99,7 +99,7 @@
           "xunit.extensibility.core": "[2.9.3]"
         }
       },
-      "calc": {
+      "Haam909.CiDummy.Calc": {
         "type": "Project"
       }
     }
