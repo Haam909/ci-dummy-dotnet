@@ -1,0 +1,21 @@
+# .github/workflows/trigger-pull-request.yml — calls reusable-verify-pull-request
+name: Pull request
+# pull_request only. A push trigger as well would report every check twice per
+# SHA, and its skipped branch-name job counts as 'Success' for a required check.
+on:
+  pull_request:
+    branches: [main]
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+# The repo default token may be read-only (contents/metadata only). A called
+# workflow can't raise permissions, so grant what reusable-verify-pull-request
+# asks for here.
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: read
+jobs:
+  ci:
+    uses: Haam909/ci-workflows/.github/workflows/reusable-verify-pull-request.yml@v1
+    secrets: inherit
